@@ -1,4 +1,51 @@
-﻿﻿using System;
+﻿<%@ Page Title="Event Details" Language="C#" MasterPageFile="~/Site.Master"
+    AutoEventWireup="true"
+    CodeBehind="EventDetails.aspx.cs"
+    Inherits="IDU0815Phoning.EventDetails" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:FormView ID="eventDetails" runat="server"
+        ItemType="IDU0815Phoning.Phoning.T_EVENT" SelectMethod="GetEvents"
+        RenderOuterTable="false">
+        <ItemTemplate>
+            <div>
+                <h1><%#:Item.RECORD_EVENT_ID %></h1>
+            </div>
+            <br />
+            <table>
+                <tr>
+                    <%--<td>
+                        <img src="/Catalog/Images/<%#:Item.ImagePath %>"
+                            style="border: solid; height: 300px" alt="<%#:Item.ProductName %>" />
+                    </td>
+                    <td>&nbsp;</td>--%>
+                    <td style="vertical-align: top; text-align: left;">
+                        <b>Event number:</b><br />
+                        <%#:Item.RECORD_ID %>
+                        <br />
+                        <span><b>Associated call:</b>&nbsp;<%#: Item.CALL_ID %></span>
+                        <br />
+                        <span><b>Date and time:</b>&nbsp;<%#:Item.RECORD_DATE
+                        %></span>
+                        <br />
+                    </td>
+                </tr>
+            </table>
+        </ItemTemplate>
+    </asp:FormView>
+</asp:Content>
+
+
+
+
+
+
+
+
+
+
+
+<%--﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -39,4 +86,4 @@ namespace IDU0815Phoning
       return query;
     }
   }
-}
+}--%>

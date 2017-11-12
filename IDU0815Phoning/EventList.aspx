@@ -39,7 +39,11 @@ CodeBehind="EventList.aspx.cs" Inherits="IDU0815Phoning.EventList" %>
           </tr> --%>
           <tr>
             <td>
-              <a href="/EventList.aspx?id=<%#: Item.RECORD_ID %>">
+              <%--<a href="/EventList.aspx?id=<%#: Item.RECORD_ID %>">
+                     <%#: Item.RECORD_EVENT_ID %>
+                     <%#: Item.RECORD_DATE %>
+                     </a>--%>
+                <a href="/EventDetails.aspx?id=<%#: Item.RECORD_ID %>">
                      <%#: Item.RECORD_EVENT_ID %>
                      <%#: Item.RECORD_DATE %>
                      </a>

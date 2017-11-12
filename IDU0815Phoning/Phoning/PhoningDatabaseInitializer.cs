@@ -68,7 +68,7 @@ namespace IDU0815Phoning.Phoning
                     RECORD_ID = 1,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2011, 12, 01),
-                    CALL_ID = 0001
+                    CALL_ID = 3456781927
                 },
                 new T_EVENT
                 {
