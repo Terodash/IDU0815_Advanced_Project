@@ -13,5 +13,6 @@ namespace IDU0815Phoning.Phoning
         }
         public DbSet<T_EVENT> Events { get; set; }
         public DbSet<T_CALL> Calls { get; set; }
+        public DbSet<T_EVENT_TYPE> EventTypes { get; set; }
     }
 }

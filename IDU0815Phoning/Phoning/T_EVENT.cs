@@ -16,8 +16,8 @@ namespace IDU0815Phoning.Phoning
             CALL_ID = this.CALL_ID;
         }*/
 
-        //[ScaffoldColumn(false)]
         [Key]
+        [ScaffoldColumn(false)]
         public int RECORD_ID { get; set; }
 
         [Required, StringLength(100), Display(Name = "Event ID")]
@@ -26,5 +26,7 @@ namespace IDU0815Phoning.Phoning
         public DateTime RECORD_DATE { get; set; }
         public long CALL_ID { get; set; }
 
+        public int? EVENT_KEY { get; set; }
+        public virtual T_EVENT_TYPE T_EVENT_TYPE { get; set; }
     }
 }

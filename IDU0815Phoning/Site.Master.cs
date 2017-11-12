@@ -20,6 +20,21 @@ namespace IDU0815Phoning
             var _db = new IDU0815Phoning.Phoning.CallContext();
             IQueryable<T_EVENT> query = _db.Events;
             return query;
-        }
+        }
+
+        public IQueryable<T_CALL> GetCalls()
+        {
+            var _db = new IDU0815Phoning.Phoning.CallContext();
+            IQueryable<T_CALL> query = _db.Calls;
+            return query;
+        }
+
+        public IQueryable<T_EVENT_TYPE> GetEventTypes()
+        {
+            var _db = new IDU0815Phoning.Phoning.CallContext();
+            IQueryable<T_EVENT_TYPE> query = _db.EventTypes;
+            return query;
+        }
+
     }
 }

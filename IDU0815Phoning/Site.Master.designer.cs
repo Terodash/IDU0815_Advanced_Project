@@ -22,15 +22,6 @@ namespace IDU0815Phoning {
         protected global::System.Web.UI.WebControls.ListView eventList;
         
         /// <summary>
-        /// callList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView callList;
-        
-        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

@@ -62,20 +62,23 @@
 
          <div id="EventMenu" style="text-align: center">
              <asp:ListView ID="eventList"
-             ItemType="IDU0815Phoning.Phoning.T_EVENT"
+             ItemType="IDU0815Phoning.Phoning.T_EVENT_TYPE"
              runat="server"
-             SelectMethod="GetEvents" >
+             SelectMethod="GetEventTypes" >
              <ItemTemplate>
                  <b style="font-size: large; font-style: normal">
-                     <a href="/EventList.aspx?id=<%#: Item.RECORD_ID %>">
-                     <%#: Item.RECORD_EVENT_ID %>
-                     <%#: Item.RECORD_DATE %>
+                     <a href="/EventList.aspx?id=<%#: Item.EVENT_ID %>">
+                     <%#: Item.EVENT_NAME %>
+                     <%--<%#: Item.RECORD_DATE %>--%>
                      </a>
                  </b>
              </ItemTemplate>
              <ItemSeparatorTemplate> | </ItemSeparatorTemplate>
              </asp:ListView>
 
+         </div>
+        <%--
+         <div id="CallMenu" style="text-align: center">
              <asp:ListView ID="callList"
              ItemType="IDU0815Phoning.Phoning.T_CALL"
              runat="server"
@@ -90,8 +93,7 @@
              </ItemTemplate>
              <ItemSeparatorTemplate> | </ItemSeparatorTemplate>
              </asp:ListView>
-
-         </div>
+         </div>--%>
 
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">

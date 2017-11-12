@@ -12,8 +12,51 @@ namespace IDU0815Phoning.Phoning
     {
         protected override void Seed (CallContext context)
         {
-            GetEvents().ForEach(e => context.Events.Add(e));
+            GetEventTypes().ForEach(eT => context.EventTypes.Add(eT));
             GetCalls().ForEach(c => context.Calls.Add(c));
+            GetEvents().ForEach(e => context.Events.Add(e));
+        }
+
+        private static List<T_EVENT_TYPE> GetEventTypes()
+        {
+            var eventTypes = new List<T_EVENT_TYPE>
+            {
+                new T_EVENT_TYPE
+                {
+                    //EVENT_KEY = 1,
+                    EVENT_ID = "EVENT_PICK_UP",
+                    EVENT_NAME = "Pick-up"
+                },
+
+                new T_EVENT_TYPE
+                {
+                    //EVENT_KEY = 2,
+                    EVENT_ID = "EVENT_DIAL",
+                    EVENT_NAME = "Dialling"
+                },
+
+                new T_EVENT_TYPE
+                {
+                    //EVENT_KEY = 3,
+                    EVENT_ID = "EVENT_CALL_ESTABLISHED",
+                    EVENT_NAME = "Call Established"
+                },
+
+                new T_EVENT_TYPE
+                {
+                    //EVENT_KEY = 4,
+                    EVENT_ID = "EVENT_CALL_END",
+                    EVENT_NAME = "Call End"
+                },
+
+                new T_EVENT_TYPE
+                {
+                    //EVENT_KEY = 5,
+                    EVENT_ID = "EVENT_HANG_UP",
+                    EVENT_NAME = "Hang-up"
+                },
+        };
+            return eventTypes;
         }
 
         private static List<T_EVENT> GetEvents()
@@ -23,14 +66,14 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 1,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_DIAL, EVENT_NAME.Dialling)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2011, 12, 01),
                     CALL_ID = 0001
                 },
                 new T_EVENT
                 {
                     RECORD_ID = 2,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_DIAL, EVENT_NAME.Dialling)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_DIAL",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0002
                 },
@@ -38,47 +81,47 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 3,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_CALL_ESTABLISHED, EVENT_NAME.CallEstablished)).ToString(),
-                    RECORD_DATE = new DateTime(2012, 11, 02),
+                    RECORD_EVENT_ID = "EVENT_CALL_ESTABLISHED",
+                    RECORD_DATE = new DateTime(2017, 11, 03),
                     CALL_ID = 0003
                 },
 
                 new T_EVENT
                 {
                     RECORD_ID = 4,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_CALL_END, EVENT_NAME.CallEnd)).ToString(),
-                    RECORD_DATE = new DateTime(2012, 11, 02),
+                    RECORD_EVENT_ID = "EVENT_CALL_END",
+                    RECORD_DATE = new DateTime(2015, 11, 05),
                     CALL_ID = 0004
                 },
 
                 new T_EVENT
                 {
                     RECORD_ID = 5,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_HANG_UP, EVENT_NAME.HangUp)).ToString(),
-                    RECORD_DATE = new DateTime(2012, 11, 02),
+                    RECORD_EVENT_ID = "EVENT_CALL_END",
+                    RECORD_DATE = new DateTime(2014, 11, 04),
                     CALL_ID = 0001
                 },
 
                 new T_EVENT
                 {
                     RECORD_ID = 6,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_PICK_UP, EVENT_NAME.PickUp)).ToString(),
-                    RECORD_DATE = new DateTime(2012, 11, 02),
+                    RECORD_EVENT_ID = "EVENT_HANG_UP",
+                    RECORD_DATE = new DateTime(2011, 11, 10),
                     CALL_ID = 0002
                 },
 
                 new T_EVENT
                 {
                     RECORD_ID = 7,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_DIAL, EVENT_NAME.Dialling)).ToString(),
-                    RECORD_DATE = new DateTime(2012, 11, 02),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
+                    RECORD_DATE = new DateTime(2012, 11, 12),
                     CALL_ID = 0005
                 },
 
                 new T_EVENT
                 {
                     RECORD_ID = 8,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_CALL_ESTABLISHED, EVENT_NAME.CallEstablished)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0010
                 },
@@ -86,7 +129,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 9,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_CALL_END, EVENT_NAME.CallEnd)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0012
                 },
@@ -94,7 +137,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 10,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_HANG_UP, EVENT_NAME.HangUp)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0113
                 },
@@ -102,7 +145,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 11,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_PICK_UP, EVENT_NAME.PickUp)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0008
                 },
@@ -110,7 +153,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 12,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_DIAL, EVENT_NAME.Dialling)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0009
                 },
@@ -118,7 +161,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 13,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_CALL_ESTABLISHED, EVENT_NAME.CallEstablished)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0010
                 },
@@ -126,7 +169,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 14,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_CALL_END, EVENT_NAME.CallEnd)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0013
                 },
@@ -134,7 +177,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 15,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_HANG_UP, EVENT_NAME.HangUp)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0002
                 },
@@ -142,7 +185,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 16,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_PICK_UP, EVENT_NAME.PickUp)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0003
                 },
@@ -150,7 +193,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 17,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_DIAL, EVENT_NAME.Dialling)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0005
                 },
@@ -158,7 +201,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 18,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_CALL_ESTABLISHED, EVENT_NAME.CallEstablished)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0006
                 },
@@ -166,7 +209,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 19,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_CALL_END, EVENT_NAME.CallEnd)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0007
                 },
@@ -174,7 +217,7 @@ namespace IDU0815Phoning.Phoning
                 new T_EVENT
                 {
                     RECORD_ID = 20,
-                    RECORD_EVENT_ID = (new T_EVENT_TYPE(EVENT_ID.EVENT_HANG_UP, EVENT_NAME.HangUp)).ToString(),
+                    RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
                     CALL_ID = 0008
                 }
