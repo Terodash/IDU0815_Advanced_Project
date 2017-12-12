@@ -43,3 +43,17 @@ E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\Microsoft.AspNet.Ide
 E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\Microsoft.AspNet.Identity.Core.xml
 E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\ObjectListView.dll
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\ObjectListView.xml
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.Helpers.dll
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.Mvc.dll
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.Razor.dll
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.WebPages.Deployment.dll
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.WebPages.dll
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.WebPages.Razor.dll
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.Helpers.xml
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.Mvc.xml
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.Razor.xml
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.WebPages.xml
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.WebPages.Deployment.xml
+E:\hubiC\Dev Tallinn\Repo\IDU0815Phoning\IDU0815Phoning\bin\System.Web.WebPages.Razor.xml

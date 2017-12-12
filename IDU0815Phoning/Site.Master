@@ -55,6 +55,7 @@
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                         <li><a runat="server" href="~/EventList">Events</a></li>
+                        <li><a runat="server" href="~/CallList">Calls</a></li>
                     </ul>
                 </div>
             </div>

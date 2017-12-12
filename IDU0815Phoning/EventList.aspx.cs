@@ -42,5 +42,14 @@ namespace IDU0815Phoning
             return query;
         }
 
+        protected void eventList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void EventGrid_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

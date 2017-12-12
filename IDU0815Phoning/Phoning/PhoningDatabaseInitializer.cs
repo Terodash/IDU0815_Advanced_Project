@@ -12,9 +12,16 @@ namespace IDU0815Phoning.Phoning
     {
         protected override void Seed (CallContext context)
         {
-            GetEventTypes().ForEach(eT => context.EventTypes.Add(eT));
             GetCalls().ForEach(c => context.Calls.Add(c));
+            GetEventTypes().ForEach(eT => context.EventTypes.Add(eT));
             GetEvents().ForEach(e => context.Events.Add(e));
+        }
+
+        public static T_CALL FindCall(int CALL_ID)
+        {
+            //T_CALL myCall = GetCalls().Find(x => x.CALL_ID == CALL_ID);
+
+            return GetCalls().Find(x => x.CALL_ID == CALL_ID); ;
         }
 
         private static List<T_EVENT_TYPE> GetEventTypes()
@@ -65,161 +72,185 @@ namespace IDU0815Phoning.Phoning
             {
                 new T_EVENT
                 {
-                    RECORD_ID = 1,
+                    ////RECORD_ID = 1,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
-                    RECORD_DATE = new DateTime(2011, 12, 01),
-                    CALL_ID = 3456781927
+                    RECORD_DATE = new DateTime(2011, 12, 01, 13, 05, 57),
+                    CALL_ID = 1
                 },
                 new T_EVENT
                 {
-                    RECORD_ID = 2,
+                    RECORD_EVENT_ID = "EVENT_DIAL",
+                    RECORD_DATE = new DateTime(2011, 12, 01, 13, 05, 57),
+                    CALL_ID = 1
+                },
+                new T_EVENT
+                {
+                    RECORD_EVENT_ID = "EVENT_CALL_ESTABLISHED",
+                    RECORD_DATE = new DateTime(2011, 12, 01, 13, 05, 57),
+                    CALL_ID = 1
+                },
+                new T_EVENT
+                {
+                    RECORD_EVENT_ID = "EVENT_CALL_END",
+                    RECORD_DATE = new DateTime(2011, 12, 01, 13, 12, 59),
+                    CALL_ID = 1
+                },
+                new T_EVENT
+                {
+                    RECORD_EVENT_ID = "EVENT_HANG_UP",
+                    RECORD_DATE = new DateTime(2011, 12, 01, 13, 05, 57),
+                    CALL_ID = 1
+                },
+                new T_EVENT
+                {
+                    ////RECORD_ID = 2,
                     RECORD_EVENT_ID = "EVENT_DIAL",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0002
+                    CALL_ID = 2
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 3,
+                    ////RECORD_ID = 3,
                     RECORD_EVENT_ID = "EVENT_CALL_ESTABLISHED",
                     RECORD_DATE = new DateTime(2017, 11, 03),
-                    CALL_ID = 0003
+                    CALL_ID = 3
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 4,
+                    ////RECORD_ID = 4,
                     RECORD_EVENT_ID = "EVENT_CALL_END",
                     RECORD_DATE = new DateTime(2015, 11, 05),
-                    CALL_ID = 0004
+                    CALL_ID = 4
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 5,
+                    ////RECORD_ID = 5,
                     RECORD_EVENT_ID = "EVENT_CALL_END",
                     RECORD_DATE = new DateTime(2014, 11, 04),
-                    CALL_ID = 0001
+                    CALL_ID = 1
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 6,
+                    ////RECORD_ID = 6,
                     RECORD_EVENT_ID = "EVENT_HANG_UP",
                     RECORD_DATE = new DateTime(2011, 11, 10),
-                    CALL_ID = 0002
+                    CALL_ID = 2
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 7,
+                    ////RECORD_ID = 7,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 12),
-                    CALL_ID = 0005
+                    CALL_ID = 5
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 8,
+                    ////RECORD_ID = 8,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0010
+                    CALL_ID = 10
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 9,
+                    ////RECORD_ID = 9,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0012
+                    CALL_ID = 12
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 10,
+                    ////RECORD_ID = 10,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0113
+                    CALL_ID = 3
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 11,
+                    ////RECORD_ID = 11,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0008
+                    CALL_ID = 8
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 12,
+                    ////RECORD_ID = 12,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0009
+                    CALL_ID = 9
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 13,
+                    ////RECORD_ID = 13,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0010
+                    CALL_ID = 10
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 14,
+                    ////RECORD_ID = 14,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0013
+                    CALL_ID = 13
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 15,
+                    ////RECORD_ID = 15,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0002
+                    CALL_ID = 2
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 16,
+                    ////RECORD_ID = 16,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0003
+                    CALL_ID = 3
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 17,
+                    ////RECORD_ID = 17,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0005
+                    CALL_ID = 5
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 18,
+                    ////RECORD_ID = 18,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0006
+                    CALL_ID = 6
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 19,
+                    ////RECORD_ID = 19,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0007
+                    CALL_ID = 7
                 },
 
                 new T_EVENT
                 {
-                    RECORD_ID = 20,
+                    ////RECORD_ID = 20,
                     RECORD_EVENT_ID = "EVENT_PICK_UP",
                     RECORD_DATE = new DateTime(2012, 11, 02),
-                    CALL_ID = 0008
+                    CALL_ID = 12
                 }
             
                 //new T_EVENT(1, "My first test event", new DateTime(2017, 11, 21), 0001),
@@ -338,85 +369,84 @@ namespace IDU0815Phoning.Phoning
             {
                 new T_CALL
                 {
-                    RECORD_ID = 1,
+                    ////RECORD_ID = 1,
                     CALLER = 345678,
                     RECEIVER = 567891
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 2,
+                    //RECORD_ID = 2,
                     CALLER = 345679,
                     RECEIVER = 567892
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 3,
+                    //RECORD_ID = 3,
                     CALLER = 345671,
                     RECEIVER = 567893
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 4,
+                    //RECORD_ID = 4,
                     CALLER = 345672,
                     RECEIVER = 567894
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 5,
+                    //RECORD_ID = 5,
                     CALLER = 345673,
                     RECEIVER = 567895
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 6,
+                    //RECORD_ID = 6,
                     CALLER = 345674,
                     RECEIVER = 567896
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 7,
+                    //RECORD_ID = 7,
                     CALLER = 345675,
                     RECEIVER = 5678917
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 8,
-                    CALLER = 345676,
-                    RECEIVER = 567891
+                    //RECORD_ID = 8,
+                    CALLER = 345676
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 9,
+                    //RECORD_ID = 9,
                     CALLER = 345677,
                     RECEIVER = 567882
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 10,
+                    //RECORD_ID = 10,
                     CALLER = 345681,
                     RECEIVER = 567891
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 11,
-                    CALLER = 345682,
+                    //RECORD_ID = 11,
+                    CALLER = 123456,
                     RECEIVER = 567898
                 },
 
                 new T_CALL
                 {
-                    RECORD_ID = 12,
-                    CALLER = 345684,
+                    //RECORD_ID = 12,
+                    CALLER = 123457,
                     RECEIVER = 567893
                 }
             };

@@ -15,8 +15,16 @@ namespace IDU0815Phoning.Phoning
             RECEIVER = this.RECEIVER;
         }*/
 
+        static int nextId;
         [Key]
-        public int RECORD_ID { get; set; }
+        [ScaffoldColumn(false)]
+        public int CALL_ID { get; private set; }
+
+        public T_CALL()
+        {
+            CALL_ID = nextId++; //auto-incremented ID
+        }
+
         public long CALLER { get; set; }
         public long RECEIVER { get; set; }
     }
