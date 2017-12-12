@@ -13,39 +13,30 @@ namespace IDU0815Phoning {
     public partial class EventList {
         
         /// <summary>
-        /// ResultsLabel control.
+        /// txtSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ResultsLabel;
+        protected global::System.Web.UI.WebControls.TextBox txtSearch;
         
         /// <summary>
-        /// ResultsList control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ResultsList;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// EventsDataPager control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataPager EventsDataPager;
-        
-        /// <summary>
-        /// eventList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView eventList;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

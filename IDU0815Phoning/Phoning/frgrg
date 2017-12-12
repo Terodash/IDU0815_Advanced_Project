@@ -1,0 +1,227 @@
+new T_CALL //1
+{
+    CALLER = 345678,
+    RECEIVER = 872345
+},
+
+new T_CALL //2
+{
+    CALLER = 375193,
+    RECEIVER = 567891
+},
+
+new T_CALL //3
+{
+    CALLER = 345678,
+    RECEIVER = 872345
+},
+
+new T_CALL //4
+{
+    CALLER = 345154,
+    RECEIVER = 314258
+},
+
+new T_CALL //5
+{
+    CALLER = 514235,
+    RECEIVER = 567891
+},
+
+new T_CALL //6
+{
+    CALLER = 802457,
+    RECEIVER = 812341
+},
+
+new T_CALL //7
+{
+    CALLER = 362178,
+    RECEIVER = 512642
+},
+
+new T_CALL //8
+{
+    CALLER = 348952,
+    RECEIVER = 567891
+},
+
+new T_CALL //9
+{
+    CALLER = 345678,
+    RECEIVER = 567891
+},
+
+new T_CALL //10
+{
+    CALLER = 814526,
+    RECEIVER = 567891
+},
+
+new T_CALL //11
+{
+    CALLER = 174952,
+    RECEIVER = 567891
+},
+
+new T_CALL //12
+{
+    CALLER = 315248,
+    RECEIVER = 567891
+},
+
+new T_CALL //13
+{
+    CALLER = 5321478,
+    RECEIVER = 567891
+},
+
+new T_CALL //14
+{
+    CALLER = 345678,
+    RECEIVER = 831456
+},
+
+new T_CALL //15
+{
+    CALLER = 847562,
+    RECEIVER = 567891
+},
+
+new T_CALL //16
+{
+    CALLER = 847562,
+    RECEIVER = 567891
+},
+
+new T_CALL //17
+{
+    CALLER = 367128,
+    RECEIVER = 567891
+},
+
+new T_CALL //18
+{
+    CALLER = 516952,
+    RECEIVER = 567891
+},
+
+new T_CALL //19
+{
+    CALLER = 345213,
+    RECEIVER = 567891
+},
+
+new T_CALL //20
+{
+    CALLER = 846235,
+    RECEIVER = 872345
+},
+
+new T_CALL //21
+{
+    CALLER = 845666,
+    RECEIVER = 567891
+},
+
+new T_CALL //22
+{
+    CALLER = 345126,
+    RECEIVER = 567891
+},
+
+new T_CALL //23
+{
+    CALLER = 846235,
+    RECEIVER = 567891
+},
+
+new T_CALL //24
+{
+    CALLER = 342168,
+    RECEIVER = 567891
+},
+
+new T_CALL //25
+{
+    CALLER = 395342,
+    RECEIVER = 567891
+},
+
+new T_CALL //26
+{
+    CALLER = 846235,
+    RECEIVER = 567891
+},
+
+new T_CALL //27
+{
+    CALLER = 532418,
+    RECEIVER = 567891
+},
+
+new T_CALL //28
+{
+    CALLER = 894235,
+    RECEIVER = 567891
+},
+
+new T_CALL //29
+{
+    CALLER = 871652,
+    RECEIVER = 567891
+},
+
+new T_CALL //30
+{
+    CALLER = 354126,
+    RECEIVER = 567891
+},
+
+new T_CALL //31
+{
+    CALLER = 565632,
+    RECEIVER = 567891
+},
+
+new T_CALL //32
+{
+    CALLER = 565632,
+    RECEIVER = 567891
+},
+
+new T_CALL //33
+{
+    CALLER = 348932,
+    RECEIVER = 567891
+},
+
+new T_CALL //34
+{
+    CALLER = 345678,
+    RECEIVER = 567891
+},
+
+new T_CALL //35
+{
+    CALLER = 512364,
+    RECEIVER = 567891
+},
+
+new T_CALL //36
+{
+    CALLER = 3425698,
+    RECEIVER = 567891
+},
+
+new T_CALL //37
+{
+    CALLER = 345678,
+    RECEIVER = 567891
+},
+
+new T_CALL //38
+{
+    CALLER = 342168,
+    RECEIVER = 567891
+},

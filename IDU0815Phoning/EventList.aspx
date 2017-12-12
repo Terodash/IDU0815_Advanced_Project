@@ -3,110 +3,36 @@ AutoEventWireup="true"
 CodeBehind="EventList.aspx.cs" Inherits="IDU0815Phoning.EventList" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
+    <asp:TextBox ID="txtSearch" runat="server" Visible="false"></asp:TextBox>
+    <br />
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RECORD_ID,EVENT_ID" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" Width="50%" HorizontalAlign="Center" AllowSorting="true" AllowPaging="true">
+        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+        <Columns>
+            <asp:BoundField DataField="RECORD_DATE" HeaderText="Date" SortExpression="RECORD_DATE" />
+            <asp:HyperLinkField
+                    DataNavigateUrlFields="CALL_ID"
+                    DataNavigateUrlFormatString="CallDetails.aspx?id={0}"
+                    DataTextField="CALL_ID"
+                    HeaderText="Call ID"
+                    SortExpression="CALL_ID" />
+            <asp:BoundField DataField="EVENT_NAME" HeaderText="Event" SortExpression="EVENT_NAME" />
+        </Columns>
+        <FooterStyle BackColor="#CCCCCC" ForeColor="White" HorizontalAlign="Center" />
+        <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White"/>
+        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Left" />
+        <RowStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Left" />
+        <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+        <SortedAscendingHeaderStyle BackColor="#0000A9" />
+        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+        <SortedDescendingHeaderStyle BackColor="#000065" />
+    </asp:GridView>
+    <br />
 
-<script runat="server">
-
-    protected void ResultsList_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        // Set the page size with the value
-        // selected in the DropDownList object
-        EventsDataPager.PageSize = Convert.ToInt32(ResultsList.SelectedValue);
-    }
-</script>
-
-<section>
-    <div>
-        <hgroup>
-            <h2><%: Page.Title %></h2>
-        </hgroup>
-
-        <table border="0" width="640px">
-            <tr>
-                <td align="left">
-                    <asp:Label ID="ResultsLabel" runat="server"
-                        AssociatedControlID="ResultsList" Text="Results per page:" />
-                    <asp:DropDownList runat="server" ID="ResultsList"
-                        OnSelectedIndexChanged="ResultsList_SelectedIndexChanged" AutoPostBack="true">
-                        <asp:ListItem Value="2" />
-                        <asp:ListItem Value="5" Selected="True" />
-                        <asp:ListItem Value="10" />
-                    </asp:DropDownList>
-                </td>
-                <td align="right">
-                    <asp:DataPager ID="EventsDataPager" runat="server"
-                        PagedControlID="eventList" PageSize="5">
-                        <Fields>
-                            <asp:NumericPagerField />
-                        </Fields>
-                    </asp:DataPager>
-                </td>
-            </tr>
-        </table>
-
-       
-        <asp:ListView ID="eventList" runat="server"
-            DataKeyNames="RECORD_ID"
-            ItemType="IDU0815Phoning.Phoning.T_EVENT" SelectMethod="GetEventTypes" OnSelectedIndexChanged="eventList_SelectedIndexChanged">
-
-            <%--<LayoutTemplate>
-                <asp:LinkButton runat="server" ID="SortButton"
-                     Text="Sort" CommandName="Sort" CommandArgument="RECORD_DATE" />
-                <table runat="server" id="table1">
-                  <tr runat="server" id="itemPlaceholder">
-                  </tr>
-                </table>
-              </LayoutTemplate>--%>
-
-
-            <EmptyDataTemplate>
-                <table>
-                    <tr>
-                        <td>No data was returned.</td>
-                    </tr>
-                </table>
-            </EmptyDataTemplate>
-            <EmptyItemTemplate>
-                <td />
-            </EmptyItemTemplate>
-            
-
-            <GroupTemplate>
-                <tr id="itemPlaceholderContainer" runat="server">
-                    <td id="itemPlaceholder" runat="server"></td>
-                </tr>
-            </GroupTemplate>
-
-                <ItemTemplate>
-                    <tr runat="server">
-                      <td><a href="/EventDetails.aspx?id=<%#: Item.RECORD_ID %>">
-                            <%#: Item.RECORD_EVENT_ID %>
-                            <%#: Item.RECORD_DATE %>
-                            <%--<%#: Item.AssociatedCall.CALLER%>--%>
-                        </a></td>
-                    </tr>
-                </ItemTemplate>
-
-            <LayoutTemplate>
-                <asp:LinkButton runat="server" ID="SortButton"
-                                    Text="Sort by date" CommandName="Sort" CommandArgument="RECORD_DATE" />
-                <table style="width: 100%;">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <table id="groupPlaceholderContainer"
-                                    runat="server" style="width: 100%">
-                                    <tr id="groupPlaceholder"></tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                        </tr>
-                        <tr></tr>
-                    </tbody>
-                </table>
-            </LayoutTemplate>
-        </asp:ListView>
-    </div>
-</section>
-</asp:Content>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IDU0815Phoning %>" SelectCommand="SELECT T_EVENT.RECORD_ID, T_EVENT.RECORD_EVENT_ID, T_EVENT.RECORD_DATE, T_EVENT.CALL_ID, T_EVENT_TYPE.EVENT_NAME, T_EVENT_TYPE.EVENT_ID FROM T_EVENT INNER JOIN T_EVENT_TYPE ON T_EVENT.RECORD_EVENT_ID = T_EVENT_TYPE.EVENT_ID" FilterExpression="RECORD_EVENT_ID = '{0}'">
+    <FilterParameters>
+         <asp:ControlParameter Name="RECORD_EVENT_ID" ControlID="txtSearch" PropertyName="Text" />
+     </FilterParameters>
+    </asp:SqlDataSource>
+    </asp:Content>

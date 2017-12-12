@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections;
 using System.Data;
+using IDU0815Phoning.Phoning;
 
 namespace IDU0815Phoning
 {
@@ -14,6 +15,13 @@ namespace IDU0815Phoning
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public IQueryable<T_EVENT_TYPE> GetEventTypes()
+        {
+            var _db = new IDU0815Phoning.Phoning.CallContext();
+            IQueryable<T_EVENT_TYPE> query = _db.EventTypes;
+            return query;
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)

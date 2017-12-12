@@ -52,55 +52,25 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
                         <li><a runat="server" href="~/EventList">Events</a></li>
                         <li><a runat="server" href="~/CallList">Calls</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
          <div id="EventMenu" style="text-align: center">
-             <asp:ListView ID="eventList"
-             ItemType="IDU0815Phoning.Phoning.T_EVENT_TYPE"
-             runat="server"
-             SelectMethod="GetEventTypes" >
-             <ItemTemplate>
-                 <b style="font-size: large; font-style: normal">
-                     <a href="/EventList.aspx?id=<%#: Item.EVENT_ID %>">
-                     <%#: Item.EVENT_NAME %>
-                     <%--<%#: Item.RECORD_DATE %>--%>
-                     </a>
-                 </b>
-             </ItemTemplate>
-             <ItemSeparatorTemplate> | </ItemSeparatorTemplate>
-             </asp:ListView>
 
          </div>
-        <%--
-         <div id="CallMenu" style="text-align: center">
-             <asp:ListView ID="callList"
-             ItemType="IDU0815Phoning.Phoning.T_CALL"
-             runat="server"
-             SelectMethod="GetCalls" >
-             <ItemTemplate>
-                 <b style="font-size: large; font-style: normal">
-                     <a href="/EventList.aspx?id=<%#: Item.RECORD_ID %>">
-                     <%#: Item.CALLER %>
-                     <%#: Item.RECEIVER %>
-                     </a>
-                 </b>
-             </ItemTemplate>
-             <ItemSeparatorTemplate> | </ItemSeparatorTemplate>
-             </asp:ListView>
-         </div>--%>
 
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
+                
+                <p>&nbsp;</p>
                 <p>&copy; <%: DateTime.Now.Year %> - By Guillaume Ricard & Quentin Desgaches</p>
             </footer>
         </div>
