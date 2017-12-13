@@ -70,6 +70,7 @@
 
         <asp:TextBox ID="SearchTextBox" runat="server" ></asp:TextBox>
         <asp:Button ID="SearchButton" runat="server" Text="Search"/>
+        <asp:Button ID="Export_CSV" runat="server" Text="Export CSV" OnClick="ClickExportCSV"  />
 
     <br />
     <br />

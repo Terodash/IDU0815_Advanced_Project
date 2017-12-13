@@ -1271,7 +1271,7 @@ namespace IDU0815Phoning.Phoning
                 new T_CALL //2
                 {
                     CALLER = 375193,
-                    RECEIVER = 567891
+                    RECEIVER = 356987
                 },
 
                 new T_CALL //3
@@ -1289,7 +1289,7 @@ namespace IDU0815Phoning.Phoning
                 new T_CALL //5
                 {
                     CALLER = 514235,
-                    RECEIVER = 567891
+                    RECEIVER = 356987
                 },
 
                 new T_CALL //6
@@ -1313,31 +1313,31 @@ namespace IDU0815Phoning.Phoning
                 new T_CALL //9
                 {
                     CALLER = 345678,
-                    RECEIVER = 567891
+                    RECEIVER = 567892
                 },
 
                 new T_CALL //10
                 {
                     CALLER = 814526,
-                    RECEIVER = 567891
+                    RECEIVER = 567892
                 },
 
                 new T_CALL //11
                 {
                     CALLER = 174952,
-                    RECEIVER = 567891
+                    RECEIVER = 567892
                 },
 
                 new T_CALL //12
                 {
                     CALLER = 315248,
-                    RECEIVER = 567891
+                    RECEIVER = 567893
                 },
 
                 new T_CALL //13
                 {
                     CALLER = 5321478,
-                    RECEIVER = 567891
+                    RECEIVER = 567893
                 },
 
                 new T_CALL //14
@@ -1349,31 +1349,31 @@ namespace IDU0815Phoning.Phoning
                 new T_CALL //15
                 {
                     CALLER = 847562,
-                    RECEIVER = 567891
+                    RECEIVER = 567854
                 },
 
                 new T_CALL //16
                 {
                     CALLER = 847562,
-                    RECEIVER = 567891
+                    RECEIVER = 567854
                 },
 
                 new T_CALL //17
                 {
                     CALLER = 367128,
-                    RECEIVER = 567891
+                    RECEIVER = 842365
                 },
 
                 new T_CALL //18
                 {
                     CALLER = 516952,
-                    RECEIVER = 567891
+                    RECEIVER = 842365
                 },
 
                 new T_CALL //19
                 {
                     CALLER = 345213,
-                    RECEIVER = 567891
+                    RECEIVER = 842365
                 },
 
                 new T_CALL //20
@@ -1385,109 +1385,109 @@ namespace IDU0815Phoning.Phoning
                 new T_CALL //21
                 {
                     CALLER = 845666,
-                    RECEIVER = 567891
+                    RECEIVER = 842365
                 },
 
                 new T_CALL //22
                 {
                     CALLER = 345126,
-                    RECEIVER = 567891
+                    RECEIVER = 814536
                 },
 
                 new T_CALL //23
                 {
                     CALLER = 846235,
-                    RECEIVER = 567891
+                    RECEIVER = 814536
                 },
 
                 new T_CALL //24
                 {
                     CALLER = 342168,
-                    RECEIVER = 567891
+                    RECEIVER = 814536
                 },
 
                 new T_CALL //25
                 {
                     CALLER = 395342,
-                    RECEIVER = 567891
+                    RECEIVER = 814536
                 },
 
                 new T_CALL //26
                 {
                     CALLER = 846235,
-                    RECEIVER = 567891
+                    RECEIVER = 814412
                 },
 
                 new T_CALL //27
                 {
                     CALLER = 532418,
-                    RECEIVER = 567891
+                    RECEIVER = 814412
                 },
 
                 new T_CALL //28
                 {
                     CALLER = 894235,
-                    RECEIVER = 567891
+                    RECEIVER = 356852
                 },
 
                 new T_CALL //29
                 {
                     CALLER = 871652,
-                    RECEIVER = 567891
+                    RECEIVER = 356852
                 },
 
                 new T_CALL //30
                 {
                     CALLER = 354126,
-                    RECEIVER = 567891
+                    RECEIVER = 541689
                 },
 
                 new T_CALL //31
                 {
                     CALLER = 565632,
-                    RECEIVER = 567891
+                    RECEIVER = 541689
                 },
 
                 new T_CALL //32
                 {
                     CALLER = 565632,
-                    RECEIVER = 567891
+                    RECEIVER = 541689
                 },
 
                 new T_CALL //33
                 {
                     CALLER = 348932,
-                    RECEIVER = 567891
+                    RECEIVER = 541689
                 },
 
                 new T_CALL //34
                 {
                     CALLER = 345678,
-                    RECEIVER = 567891
+                    RECEIVER = 591364
                 },
 
                 new T_CALL //35
                 {
                     CALLER = 512364,
-                    RECEIVER = 567891
+                    RECEIVER = 591364
                 },
 
                 new T_CALL //36
                 {
                     CALLER = 3425698,
-                    RECEIVER = 567891
+                    RECEIVER = 591364
                 },
 
                 new T_CALL //37
                 {
                     CALLER = 345678,
-                    RECEIVER = 567891
+                    RECEIVER = 591348
                 },
 
                 new T_CALL //38
                 {
                     CALLER = 342168,
-                    RECEIVER = 567891
+                    RECEIVER = 356987
                 },
 
             };

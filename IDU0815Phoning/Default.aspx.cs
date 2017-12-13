@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Collections;
 using System.Data;
 using IDU0815Phoning.Phoning;
+using System.Text;
 
 namespace IDU0815Phoning
 {
@@ -30,6 +31,42 @@ namespace IDU0815Phoning
             {
                 GridView1.PageSize = Convert.ToInt32(ddl_PageSize.SelectedValue);
                 GridView1.DataBind();
+            }
+        }
+
+        protected void ClickExportCSV(object sender, EventArgs e)
+        {
+            {
+                Response.Clear();
+                Response.Buffer = true;
+                Response.AddHeader("content-disposition", "attachment;filename=Phoning.csv");
+                Response.Charset = "";
+                Response.ContentType = "application/text";
+                GridView1.AllowPaging = false;
+                GridView1.DataBind();
+
+                StringBuilder columnbind = new StringBuilder();
+                for (int k = 0; k < GridView1.Columns.Count; k++)
+                {
+
+                    columnbind.Append(GridView1.Columns[k].HeaderText + ',');
+                }
+
+                columnbind.Append("\r\n");
+                for (int i = 0; i < GridView1.Rows.Count; i++)
+                {
+                    for (int k = 0; k < GridView1.Columns.Count; k++)
+                    {
+
+                        columnbind.Append(GridView1.Rows[i].Cells[k].Text + ',');
+                    }
+
+                    columnbind.Append("\r\n");
+                }
+                Response.Output.Write(columnbind.ToString());
+                Response.Flush();
+                Response.End();
+
             }
         }
 

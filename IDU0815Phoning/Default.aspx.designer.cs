@@ -76,6 +76,15 @@ namespace IDU0815Phoning {
         protected global::System.Web.UI.WebControls.Button SearchButton;
         
         /// <summary>
+        /// Export_CSV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Export_CSV;
+        
+        /// <summary>
         /// eventList control.
         /// </summary>
         /// <remarks>
